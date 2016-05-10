@@ -4,4 +4,4 @@
 ##### 參考資料
 - Bootstrap官方網站: http://getbootstrap.com/
 - 原始碼: https://github.com/twbs/bootstrap
-- 中文操作手冊: by kkbruce: https://kkbruce.tw/bs3/
+- 中文操作手冊 by kkbruce: https://kkbruce.tw/bs3/
