@@ -1,4 +1,11 @@
 ﻿body {
     padding-top: 70px;
+    padding-bottom: 100px;
     font-family: Verdana,"Helvetica Neue", Helvetica, Arial, "微軟正黑體", sans-serif;
+    font-size : 160%;
+}
+
+.prettyprint {
+    font-family: Consolas, "微軟正黑體";
+    font-size: 100%;
 }

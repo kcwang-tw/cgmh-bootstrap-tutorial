@@ -41,16 +41,124 @@
     </nav>
     <div class="container">
         <h1><span class="glyphicon glyphicon-thumbs-up"></span> 活用Bootstrap套版打造友善網頁</h1>
-        <h3>- 2016長庚醫院醫療資訊管理部組會技術分享</h3>
+        <ul>
+            <li>2016長庚醫院醫療資訊管理部組會技術分享</li>
+            <li>
+                原始碼：
+                <a href="https://github.com/kcwang-tw/cgmh-bootstrap-tutorial" target=_new>
+                    https://github.com/kcwang-tw/cgmh-bootstrap-tutorial
+                </a>
+            </li>
+            <li>Create by kcwang @ CGMH</li>
+        </ul>
+        <br />
         <hr />
-        <p>
-            原始碼：
-            <a href="https://github.com/kcwang-tw/cgmh-bootstrap-tutorial" target=_new>
-                https://github.com/kcwang-tw/cgmh-bootstrap-tutorial
-            </a>
-        </p>
-        <p>Create by kcwang @ CGMH</p>
+        <h1><span class="glyphicon glyphicon-tint"></span> 按鈕、面板與美化</h1>
+        <div class="row">
+            <h3>1. 美化按鈕</h3>
+            <div class="col-sm-6">
+                <h3>原始按鈕</h3>
+                <p class="text-danger">Demo code:</p>
+                <pre class="prettyprint">
+ &lt;button type="button"&gt;按鈕1&lt;/button&gt;
+ &lt;button type="button"&gt;按鈕2&lt;/button&gt;
+ &lt;button type="button"&gt;按鈕3&lt;/button&gt;
+ &lt;button type="button"&gt;按鈕4&lt;/button&gt;
+ &lt;button type="button"&gt;按鈕5&lt;/button&gt;
+ &lt;button type="button"&gt;按鈕6&lt;/button&gt;
+ &lt;button type="button"&gt;按鈕7&lt;/button&gt;
+                </pre>
+                <p class="text-primary">實例:</p>
+                <button type="button">按鈕1</button>
+                <button type="button">按鈕2</button>
+                <button type="button">按鈕3</button>
+                <button type="button">按鈕4</button>
+                <button type="button">按鈕5</button>
+                <button type="button">按鈕6</button>
+                <button type="button">按鈕7</button>
+            </div>
+            <div class="col-sm-6">
+                <h3>Bootstrap美化按鈕</h3>
+                <p class="text-danger">Demo code:</p>
+                <pre class="prettyprint">
+ &lt;button type="button" class="btn btn-default"&gt;按鈕1&lt;/button&gt;
+ &lt;button type="button" class="btn btn-primary"&gt;按鈕2&lt;/button&gt;
+ &lt;button type="button" class="btn btn-info"&gt;按鈕3&lt;/button&gt;
+ &lt;button type="button" class="btn btn-success"&gt;按鈕4&lt;/button&gt;
+ &lt;button type="button" class="btn btn-warning"&gt;按鈕5&lt;/button&gt;
+ &lt;button type="button" class="btn btn-danger"&gt;按鈕6&lt;/button&gt;
+ &lt;button type="button" class="btn btn-link"&gt;按鈕7&lt;/button&gt;
+                </pre>
+                <p class="text-primary">實例:</p>
+                <button type="button" class="btn btn-default">按鈕1</button>
+                <button type="button" class="btn btn-primary">按鈕2</button>
+                <button type="button" class="btn btn-info">按鈕3</button>
+                <button type="button" class="btn btn-success">按鈕4</button>
+                <button type="button" class="btn btn-warning">按鈕5</button>
+                <button type="button" class="btn btn-danger">按鈕6</button>
+                <button type="button" class="btn btn-link">按鈕7</button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <h3>2. 按鈕縮放及添加圖示</h3>
+            <div class="col-sm-12">
+                <p class="text-danger">Demo code:</p>
+                <pre class="prettyprint">
+ &lt;button type="button" class="btn btn-success btn-xs"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 縮小按鈕&lt;/button&gt;
+ &lt;button type="button" class="btn btn-warning"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 正常大小&lt;/button&gt;
+ &lt;button type="button" class="btn btn-danger btn-lg"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 放大按鈕&lt;/button&gt;
+                </pre>
+                <p class="text-primary">實例:</p>
+                <button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-edit"></i> 縮小按鈕</button>
+                <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-edit"></i> 正常大小</button>
+                <button type="button" class="btn btn-danger btn-lg"><i class="glyphicon glyphicon-edit"></i> 放大按鈕</button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <h3>3. 面板</h3>
+            <div class="col-sm-12">
+                <p class="text-danger">Demo code:</p>
+                <pre class="prettyprint">
+
+ &lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-body"&gt; 
+        無標題面板
+    &lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="panel panel-danger"&gt;
+    &lt;div class="panel-heading"&gt; 
+        &lt;h3 class="panel-title"&gt;&lt;i class="glyphicon glyphicon-remove"&gt;&lt;/i&gt; 面板標題&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="panel-body"&gt; 
+        面板內容
+    &lt;/div&gt;
+ &lt;/div&gt;
+                </pre>
+                <p class="text-primary">實例:</p>
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            無標題面板
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="glyphicon glyphicon-remove"></i> 面板標題</h3>
+                        </div>
+                        <div class="panel-body">
+                            面板內容
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </body>
 </html>
