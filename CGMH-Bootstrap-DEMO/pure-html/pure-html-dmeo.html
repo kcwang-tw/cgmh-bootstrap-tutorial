@@ -7,8 +7,8 @@
         <link href="../Content/main.css" rel="stylesheet" />
         <script src="../Scripts/jquery-1.9.1.min.js"></script>
     </head>
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+<body data-spy="scroll" data-target="#navbar">
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -24,8 +24,9 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#"><span class="glyphicon glyphicon-tint"></span> 按鈕、面板與美化</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-th"></span> 網格系統與排版</a></li>
+                    <li class="active"><a href="#top_info"><span class="glyphicon glyphicon-thumbs-up"></span> 使用說明</a></li>
+                    <li><a href="#beautify"><span class="glyphicon glyphicon-tint"></span> 按鈕、面板與美化</a></li>
+                    <li><a href="#grid"><span class="glyphicon glyphicon-th"></span> 網格系統與排版</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             其他版本DEMO <span class="caret"></span>
@@ -40,26 +41,37 @@
         </div>
     </nav>
     <div class="container">
-        <h1><span class="glyphicon glyphicon-thumbs-up"></span> 活用Bootstrap套版打造友善網頁</h1>
+        <h1 id="top_info"><span class="glyphicon glyphicon-thumbs-up"></span> 活用Bootstrap套版打造友善網頁</h1>
+        <br />
         <ul>
             <li>2016長庚醫院醫療資訊管理部組會技術分享</li>
+            <li>於電腦版操作時可調整瀏覽器大小來觀看不同解析度產生的效果</li>
+            <li>可點選其他版本DEMO來觀看Bootstrap套用在純HTML網頁、Web Form與MVC的範例</li>
+            <li>簡報：</li>
             <li>
                 原始碼：
                 <a href="https://github.com/kcwang-tw/cgmh-bootstrap-tutorial" target=_new>
                     https://github.com/kcwang-tw/cgmh-bootstrap-tutorial
                 </a>
             </li>
-            <li>Create by kcwang @ CGMH</li>
+            <li>
+                更多進階應用請直接參考官方文件
+                <a href="http://getbootstrap.com/" target=_new>
+                    http://getbootstrap.com/
+                </a>
+            </li>
         </ul>
+        <p class="text-right">Create by kcwang @ CGMH</p>
         <br />
         <hr />
-        <h1><span class="glyphicon glyphicon-tint"></span> 按鈕、面板與美化</h1>
+        <h1 id="beautify"><span class="glyphicon glyphicon-tint"></span> 按鈕、面板與美化</h1>
         <div class="row">
             <h3>1. 美化按鈕</h3>
             <div class="col-sm-6">
                 <h3>原始按鈕</h3>
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
+
  &lt;button type="button"&gt;按鈕1&lt;/button&gt;
  &lt;button type="button"&gt;按鈕2&lt;/button&gt;
  &lt;button type="button"&gt;按鈕3&lt;/button&gt;
@@ -81,6 +93,7 @@
                 <h3>Bootstrap美化按鈕</h3>
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
+
  &lt;button type="button" class="btn btn-default"&gt;按鈕1&lt;/button&gt;
  &lt;button type="button" class="btn btn-primary"&gt;按鈕2&lt;/button&gt;
  &lt;button type="button" class="btn btn-info"&gt;按鈕3&lt;/button&gt;
@@ -105,6 +118,7 @@
             <div class="col-sm-12">
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
+
  &lt;button type="button" class="btn btn-success btn-xs"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 縮小按鈕&lt;/button&gt;
  &lt;button type="button" class="btn btn-warning"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 正常大小&lt;/button&gt;
  &lt;button type="button" class="btn btn-danger btn-lg"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 放大按鈕&lt;/button&gt;
@@ -127,7 +141,6 @@
         無標題面板
     &lt;/div&gt;
  &lt;/div&gt;
-
  &lt;div class="panel panel-danger"&gt;
     &lt;div class="panel-heading"&gt; 
         &lt;h3 class="panel-title"&gt;&lt;i class="glyphicon glyphicon-remove"&gt;&lt;/i&gt; 面板標題&lt;/h3&gt;
@@ -152,6 +165,179 @@
                         </div>
                         <div class="panel-body">
                             面板內容
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <hr />
+        <h1 id="grid"><span class="glyphicon glyphicon-th"></span> 網格系統與排版</h1>
+        <div class="row">
+            <h3>1. 基本排版</h3>
+            <div class="col-sm-12">
+                <p class="text-danger">Demo code:</p>
+                <pre class="prettyprint">
+                
+ &lt;div class="row"&gt;
+     &lt;div class="col-sm-12"&gt;.col-sm-12&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="row"&gt;
+     &lt;div class="col-sm-6"&gt;.col-sm-6&lt;/div&gt;
+     &lt;div class="col-sm-6"&gt;.col-sm-6&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="row"&gt;
+     &lt;div class="col-sm-2"&gt;.col-sm-2&lt;/div&gt;
+     &lt;div class="col-sm-6"&gt;.col-sm-6&lt;/div&gt;
+     &lt;div class="col-sm-4"&gt;.col-sm-4&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="row"&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+     &lt;div class="col-sm-1"&gt;.col-sm-1&lt;/div&gt;
+ &lt;/div&gt;
+                </pre>
+                <p class="text-primary">實例:</p>
+                <div class="col-sm-12 demo_grid">
+                    <div class="row">
+                        <div class="col-sm-12">.col-sm-12</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">.col-sm-6</div>
+                        <div class="col-sm-6">.col-sm-6</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">.col-sm-2</div>
+                        <div class="col-sm-6">.col-sm-6</div>
+                        <div class="col-sm-4">.col-sm-4</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                        <div class="col-sm-1">.col-sm-1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h3>2. 位移排版</h3>
+            <div class="col-sm-12">
+                <p class="text-danger">Demo code:</p>
+                <pre class="prettyprint">
+
+ &lt;div class="row"&gt;
+     &lt;div class="col-sm-offset-4 col-sm-4"&gt;.col-sm-offset-4 .col-sm-4&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="row"&gt;
+     &lt;div class="col-sm-3"&gt;.col-sm-3&lt;/div&gt;
+     &lt;div class="col-sm-offset-1 col-sm-3"&gt;.col-sm-offset-1 .col-sm-3&lt;/div&gt;
+     &lt;div class="col-sm-offset-2 col-sm-3"&gt;.col-sm-offset-2 .col-sm-3&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="row"&gt;
+     &lt;div class="col-sm-offset-2 col-sm-10"&gt;.col-sm-offset-2 .col-sm-10&lt;/div&gt;
+ &lt;/div&gt;
+                </pre>
+                <p class="text-primary">實例:</p>
+                <div class="col-sm-12 demo_grid">
+                    <div class="row">
+                        <div class="col-sm-offset-4 col-sm-4">.col-sm-offset-4 .col-sm-4</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">.col-sm-3</div>
+                        <div class="col-sm-offset-1 col-sm-3">.col-sm-offset-1 .col-sm-3</div>
+                        <div class="col-sm-offset-2 col-sm-3">.col-sm-offset-2 .col-sm-3</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-10">.col-sm-offset-2 .col-sm-10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h3>3. 適應解析度排版</h3>
+            <div class="col-sm-12">
+                <p class="text-danger">Demo code:</p>
+                <pre class="prettyprint">
+
+ &lt;div class="row"&gt;
+     &lt;div class="col-xs-6 bg-success"&gt;
+         在小螢幕上也會水平排列
+     &lt;/div&gt;
+     &lt;div class="col-xs-6 bg-success"&gt;
+         在小螢幕上也會水平排列
+     &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="row"&gt;
+     &lt;div class="col-md-6 bg-danger"&gt;
+         在小螢幕上會呈垂直排列
+     &lt;/div&gt;
+     &lt;div class="col-md-6 bg-danger"&gt;
+         在小螢幕上會呈垂直排列
+     &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="row"&gt;
+     &lt;div class="hidden-xs hidden-sm bg-warning"&gt;
+         在螢幕解析度寬度大於992px才能看到我
+     &lt;/div&gt;
+     &lt;div class="hidden-xs bg-primary"&gt;
+         在螢幕解析度寬度大於768px才能看到我
+     &lt;/div&gt;
+     &lt;div class="visible-xs bg-info"&gt;
+         在螢幕解析度寬度小於768px才能看到我
+     &lt;/div&gt;
+     &lt;div class="visible-xs visible-lg"&gt;
+         在螢幕解析度寬度小於768px或大於1200才能看到我
+     &lt;/div&gt;
+ &lt;/div&gt;                
+                </pre>
+                <p class="text-primary">實例:</p>
+                <div class="col-sm-12 demo_grid">
+                    <div class="row">
+                        <div class="col-xs-6 bg-success">
+                            在小螢幕上也會水平排列
+                        </div>
+                        <div class="col-xs-6 bg-success">
+                            在小螢幕上也會水平排列
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 bg-danger">
+                            在小螢幕上會呈垂直排列
+                        </div>
+                        <div class="col-md-6 bg-danger">
+                            在小螢幕上會呈垂直排列
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="hidden-xs hidden-sm bg-warning">
+                            在螢幕解析度寬度大於992px才能看到我
+                        </div>
+                        <div class="hidden-xs bg-primary">
+                            在螢幕解析度寬度大於768px才能看到我
+                        </div>
+                        <div class="visible-xs bg-info">
+                            在螢幕解析度寬度小於768px才能看到我
+                        </div>
+                        <div class="visible-xs visible-lg">
+                            在螢幕解析度寬度小於768px或大於1200才能看到我
                         </div>
                     </div>
                 </div>

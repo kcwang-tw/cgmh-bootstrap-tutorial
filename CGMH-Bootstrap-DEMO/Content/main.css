@@ -3,9 +3,25 @@
     padding-bottom: 100px;
     font-family: Verdana,"Helvetica Neue", Helvetica, Arial, "微軟正黑體", sans-serif;
     font-size : 160%;
+    position: relative;
 }
 
 .prettyprint {
     font-family: Consolas, "微軟正黑體";
     font-size: 100%;
+}
+
+.demo_grid {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.demo_grid > .row  {
+    margin-bottom: 5px;
+}
+
+.demo_grid > .row > div {
+    border: 1px solid #0094ff;
+    padding: 10px;
+    text-align: center;
 }
