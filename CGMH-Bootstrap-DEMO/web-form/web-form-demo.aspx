@@ -36,7 +36,7 @@
                             其他版本DEMO <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">純HTML網頁</a></li>
+                            <li><a href="../pure-html/pure-html-dmeo.html">純HTML網頁</a></li>
                             <li><a href="#">ASP.NET MVC</a></li>
                         </ul>
                     </li>
