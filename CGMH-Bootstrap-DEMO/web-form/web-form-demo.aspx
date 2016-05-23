@@ -38,7 +38,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="../pure-html/pure-html-dmeo.html">純HTML網頁</a></li>
-                            <li><a href="#">ASP.NET MVC</a></li>
+                            <li><a href="../MVCDemo/Index">ASP.NET MVC</a></li>
                         </ul>
                     </li>
                 </ul>

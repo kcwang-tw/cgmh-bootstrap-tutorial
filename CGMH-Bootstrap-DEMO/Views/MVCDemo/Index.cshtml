@@ -1,13 +1,19 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>純HTML網頁範例</title>
-        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-        <link href="../Content/main.css" rel="stylesheet" />
-        <script src="../Scripts/jquery-1.9.1.min.js"></script>
-    </head>
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASP.NET MVC範例</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+</head>
 <body data-spy="scroll" data-target="#navbar">
     <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -33,8 +39,8 @@
                             其他版本DEMO <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a href="../pure-html/pure-html-dmeo.html">純HTML網頁</a></li>
                             <li><a href="../web-form/web-form-demo.aspx">ASP.NET Web Form</a></li>
-                            <li><a href="../MVCDemo/Index">ASP.NET MVC</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -46,7 +52,7 @@
         <br />
         <ul>
             <li>2016長庚醫院醫療資訊管理部組會技術分享</li>
-            <li>您現在使用的是純HTML版本Demo</li>
+            <li>您現在使用的是ASP.NET MVC版本Demo</li>
             <li>於電腦版操作時可調整瀏覽器大小來觀看不同解析度產生的效果</li>
             <li>可點選其他版本DEMO來觀看Bootstrap套用在純HTML網頁、Web Form與MVC的範例</li>
             <li>簡報：</li>
@@ -63,7 +69,7 @@
                 </a>
             </li>
         </ul>
-        <p class="text-right">Create by kcwang @ CGMH</p>
+        <p class="text-right">Create by kcwang @@ CGMH</p>
         <br />
         <hr />
         <h1 id="beautify"><span class="glyphicon glyphicon-tint"></span> 按鈕、面板與美化</h1>
@@ -73,45 +79,43 @@
                 <h3>原始按鈕</h3>
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
-
- &lt;button type="button"&gt;按鈕1&lt;/button&gt;
- &lt;button type="button"&gt;按鈕2&lt;/button&gt;
- &lt;button type="button"&gt;按鈕3&lt;/button&gt;
- &lt;button type="button"&gt;按鈕4&lt;/button&gt;
- &lt;button type="button"&gt;按鈕5&lt;/button&gt;
- &lt;button type="button"&gt;按鈕6&lt;/button&gt;
- &lt;button type="button"&gt;按鈕7&lt;/button&gt;
+ @@Html.ActionLink("連結1", "Index", null, new { @@class = "" })
+ @@Html.ActionLink("連結2", "Index", null, new { @@class = "" })
+ @@Html.ActionLink("連結3", "Index", null, new { @@class = "" })
+ @@Html.ActionLink("連結4", "Index", null, new { @@class = "" })
+ @@Html.ActionLink("連結5", "Index", null, new { @@class = "" })
+ @@Html.ActionLink("連結6", "Index", null, new { @@class = "" })
+ @@Html.ActionLink("連結7", "Index", null, new { @@class = "" })
                 </pre>
                 <p class="text-primary">實例:</p>
-                <button type="button">按鈕1</button>
-                <button type="button">按鈕2</button>
-                <button type="button">按鈕3</button>
-                <button type="button">按鈕4</button>
-                <button type="button">按鈕5</button>
-                <button type="button">按鈕6</button>
-                <button type="button">按鈕7</button>
+                @Html.ActionLink("連結1", "Index", null, new { @class = "" })
+                @Html.ActionLink("連結2", "Index", null, new { @class = "" })
+                @Html.ActionLink("連結3", "Index", null, new { @class = "" })
+                @Html.ActionLink("連結4", "Index", null, new { @class = "" })
+                @Html.ActionLink("連結5", "Index", null, new { @class = "" })
+                @Html.ActionLink("連結6", "Index", null, new { @class = "" })
+                @Html.ActionLink("連結7", "Index", null, new { @class = "" })
             </div>
             <div class="col-sm-6">
                 <h3>Bootstrap美化按鈕</h3>
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
-
- &lt;button type="button" class="btn btn-default"&gt;按鈕1&lt;/button&gt;
- &lt;button type="button" class="btn btn-primary"&gt;按鈕2&lt;/button&gt;
- &lt;button type="button" class="btn btn-info"&gt;按鈕3&lt;/button&gt;
- &lt;button type="button" class="btn btn-success"&gt;按鈕4&lt;/button&gt;
- &lt;button type="button" class="btn btn-warning"&gt;按鈕5&lt;/button&gt;
- &lt;button type="button" class="btn btn-danger"&gt;按鈕6&lt;/button&gt;
- &lt;button type="button" class="btn btn-link"&gt;按鈕7&lt;/button&gt;
+ @@Html.ActionLink("連結1", "Index", null, new { @@class = "btn btn-default" })
+ @@Html.ActionLink("連結2", "Index", null, new { @@class = "btn btn-primary" })
+ @@Html.ActionLink("連結3", "Index", null, new { @@class = "btn btn-info" })
+ @@Html.ActionLink("連結4", "Index", null, new { @@class = "btn btn-success" })
+ @@Html.ActionLink("連結5", "Index", null, new { @@class = "btn btn-warning" })
+ @@Html.ActionLink("連結6", "Index", null, new { @@class = "btn btn-danger" })
+ @@Html.ActionLink("連結7", "Index", null, new { @@class = "btn btn-link" })
                 </pre>
                 <p class="text-primary">實例:</p>
-                <button type="button" class="btn btn-default">按鈕1</button>
-                <button type="button" class="btn btn-primary">按鈕2</button>
-                <button type="button" class="btn btn-info">按鈕3</button>
-                <button type="button" class="btn btn-success">按鈕4</button>
-                <button type="button" class="btn btn-warning">按鈕5</button>
-                <button type="button" class="btn btn-danger">按鈕6</button>
-                <button type="button" class="btn btn-link">按鈕7</button>
+                @Html.ActionLink("連結1", "Index", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("連結2", "Index", null, new { @class = "btn btn-primary" })
+                @Html.ActionLink("連結3", "Index", null, new { @class = "btn btn-info" })
+                @Html.ActionLink("連結4", "Index", null, new { @class = "btn btn-success" })
+                @Html.ActionLink("連結5", "Index", null, new { @class = "btn btn-warning" })
+                @Html.ActionLink("連結6", "Index", null, new { @class = "btn btn-danger" })
+                @Html.ActionLink("連結7", "Index", null, new { @class = "btn btn-link" })
             </div>
         </div>
         <br />
@@ -120,7 +124,6 @@
             <div class="col-sm-12">
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
-
  &lt;button type="button" class="btn btn-success btn-xs"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 縮小按鈕&lt;/button&gt;
  &lt;button type="button" class="btn btn-warning"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 正常大小&lt;/button&gt;
  &lt;button type="button" class="btn btn-danger btn-lg"&gt;&lt;i class="glyphicon glyphicon-edit"&gt; 放大按鈕&lt;/button&gt;
@@ -137,7 +140,6 @@
             <div class="col-sm-12">
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
-
  &lt;div class="panel panel-default"&gt;
     &lt;div class="panel-body"&gt; 
         無標題面板
@@ -249,7 +251,6 @@
             <div class="col-sm-12">
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
-
  &lt;div class="row"&gt;
      &lt;div class="col-sm-offset-4 col-sm-4"&gt;.col-sm-offset-4 .col-sm-4&lt;/div&gt;
  &lt;/div&gt;
@@ -283,7 +284,6 @@
             <div class="col-sm-12">
                 <p class="text-danger">Demo code:</p>
                 <pre class="prettyprint">
-
  &lt;div class="row"&gt;
      &lt;div class="col-xs-6 bg-success"&gt;
          在小螢幕上也會水平排列
@@ -351,7 +351,6 @@
             </div>
         </div>
     </div>
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
